@@ -1,0 +1,25 @@
+
+.buttons-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
+    gap: 20px; /* Adjust the gap between buttons */
+    justify-content: center; /* Center the grid horizontally */
+    align-items: center; /* Center the grid vertically */
+    height: 100vh; /* Make the homepage cover the entire viewport height */
+  }
+  
+  .button {
+    padding: 10px 20px;
+    background-color: #4caf50; /* Change the background color as needed */
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #45a049; /* Darker shade of the background color on hover */
+  }
