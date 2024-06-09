@@ -1,24 +1,33 @@
-import React, { Suspense } from 'react';
+//Styles
 import './App.css';
-import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
-import HomePage from './pages/HomePage';
-import SpinTheWheel from './pages/SpinTheWheel';
-import SpankBank from './pages/SpankBank/SpankBank';
 
+//Components
+import React, { Suspense } from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
+
+//Pages
+const Home = React.lazy(() => import('./pages/Home/home'));
+const SpinTheWheel = React.lazy(() => import('./pages/SpinTheWheel/spinTheWheel'));
+const SpankBank = React.lazy(() => import('./pages/Spankbank/spankBank'));
 
 function App() {
   return (
-    <Router>
-    <Suspense fallback={<div>Loading</div>}>
-      
-      <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/SpinTheWheel" element={<SpinTheWheel />} />
-      <Route path="/SpankBank" element={<SpankBank />} />
-    </Routes>
-   
-    </Suspense>
-    </Router>
+      <div className='main'>
+      <Suspense fallback={<div>Loading</div>}>
+        <Routes>
+          <Route path='*' element={<Home />} />
+          <Route path='/SpinTheWheel' element={<SpinTheWheel />} />
+          <Route path='/SpankBank' element={<SpankBank />} />
+          {/* Default Route */}
+          <Route path='/' element={<Navigate to='/Dashboard' />}>
+            <Route
+              path='*'
+              element={<Navigate to='/' />}
+            />
+          </Route>
+        </Routes>
+      </Suspense>
+    </div>
   );
 }
 
