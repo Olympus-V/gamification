@@ -1,5 +1,3 @@
-
-
 const SpinTheWheel = () => {
     return(
       <div>

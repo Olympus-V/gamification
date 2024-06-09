@@ -1,12 +1,12 @@
-import "./SpankBank.css";
-import React, { useState } from "react";
+import "./spankBank.scss";
+import { useState } from "react";
 
 const SpankBank = () => {
   const [isJiggling, setIsJiggling] = useState(false);
-  const [slap] = useState(new Audio("/audio/spank.mp3"));
-  const [moanFirst] = useState(new Audio("/audio/Moan_1.mp3"));
-  const [moanSecond] = useState(new Audio("/audio/Moan_2.mp3"));
-  const [moanThird] = useState(new Audio("/audio/Moan_3.mp3"));
+  const [slap] = useState(new Audio('/audio/SpankBank/spank.mp3'));
+  const [moanFirst] = useState(new Audio('/audio/SpankBank/moan_1.mp3'));
+  const [moanSecond] = useState(new Audio('/audio/SpankBank/moan_2.mp3'));
+  const [moanThird] = useState(new Audio('/audio/SpankBank/moan_3.mp3'));
 
   const handleSpank = () => {
     setIsJiggling(true);
@@ -30,12 +30,12 @@ const SpankBank = () => {
   };
 
   return (
-    <div className="centered-container">
+    <div className='centered-container'>
       <div
-        className={`PosteriorOrifice ${isJiggling ? "jiggle" : ""}`}
+        className={`graphic-container ${isJiggling ? 'jiggle' : ''}`}
         onClick={handleClick}
       >
-        <img src="/images/spank_it.png" alt="Spank It" />
+        <img src='/images/SpankBank/ass.png' alt='ass'/>
       </div>
     </div>
   );
