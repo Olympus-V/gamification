@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
-import './MemoryLane.css';
+import './MemoryLane.scss';
 
-interface Photo {
+interface IPhoto {
   src: string;
   date: string | null;
 }
 
 const MemoryLane: React.FC = () => {
-  const [photos, setPhotos] = useState<Photo[]>([]);
+  const [photos, setPhotos] = useState<IPhoto[]>([]);
 
   const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(event.target.files || []);
-    const photoData: Photo[] = [];
+    const photoData: IPhoto[] = [];
 
     files.forEach((file) => {
       const reader = new FileReader();
