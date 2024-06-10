@@ -4,30 +4,35 @@ import './App.css';
 //Components
 import React, { Suspense } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
+import TopNav from './components/TopNav/topnav';
+import { CircularProgress } from '@mui/material';
 
 //Pages
 const Home = React.lazy(() => import('./pages/Home/home'));
-const SpinTheWheel = React.lazy(() => import('./pages/SpinTheWheel/spinTheWheel'));
-const SpankBank = React.lazy(() => import('./pages/Spankbank/spankBank'));
+const Games = React.lazy(() => import('./pages/Games/games'));
+const SpinTheWheel = React.lazy(() => import('./pages/Games/SpinTheWheel/spinTheWheel'));
+const SpankBank = React.lazy(() => import('./pages/Games/SpankBank/spankBank'));
 
 function App() {
   return (
+    <>
+      <div className='top-nav'>
+        <TopNav />
+      </div>
       <div className='main'>
-      <Suspense fallback={<div>Loading</div>}>
-        <Routes>
-          <Route path='*' element={<Home />} />
-          <Route path='/SpinTheWheel' element={<SpinTheWheel />} />
-          <Route path='/SpankBank' element={<SpankBank />} />
-          {/* Default Route */}
-          <Route path='/' element={<Navigate to='/Dashboard' />}>
-            <Route
-              path='*'
-              element={<Navigate to='/' />}
-            />
-          </Route>
-        </Routes>
-      </Suspense>
-    </div>
+        <Suspense fallback={<div className="loading-container"><CircularProgress /></div>}>
+          <Routes>
+            <Route path='/home' element={<Home />} />
+            <Route path='/games' element={<Games />} />
+            <Route path='/games/spinTheWheel' element={<SpinTheWheel />} />
+            <Route path='/games/spankBank' element={<SpankBank />} />
+            {/* Default Route */}
+            <Route path='/' element={<Navigate to='/home' />} />
+            <Route path='*' element={<Navigate to='/' />} />
+          </Routes>
+        </Suspense>
+      </div>
+    </>
   );
 }
 

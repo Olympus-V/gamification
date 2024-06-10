@@ -1,0 +1,35 @@
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1em;
+    background-color: white;
+
+    .logo {
+        height: 10em;
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+        font-size: 1em;
+
+        li {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-weight: bold;
+            &:hover {
+                color: #FF5757;
+            }
+            &.active {
+                color: #FF5757;
+            }
+
+            svg {
+                margin-right: 0.5rem;
+            }
+        }
+    }
+}
