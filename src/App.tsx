@@ -27,7 +27,7 @@ function App() {
             <Route path='/games' element={<Games />} />
             <Route path='/games/spinTheWheel' element={<SpinTheWheel />} />
             <Route path='/games/spankBank' element={<SpankBank />} />
-            <Route path='/games/MemoryLane' element={<MemoryLane/>}/>
+            <Route path='/games/memoryLane' element={<MemoryLane/>}/>
             {/* Default Route */}
             <Route path='/' element={<Navigate to='/home' />} />
             <Route path='*' element={<Navigate to='/' />} />

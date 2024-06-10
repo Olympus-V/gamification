@@ -28,7 +28,7 @@ const GamesPage = () => {
                 </div>
                 <div className='game-card'>
                     <img src='/images/MemoryLane/game_icon.svg' alt='Memory Lane' />
-                    <button>Memory Lane</button>
+                    <button onClick={() => navigate('/games/memoryLane')}>Memory Lane</button>
                 </div>
             </div>
         </div>

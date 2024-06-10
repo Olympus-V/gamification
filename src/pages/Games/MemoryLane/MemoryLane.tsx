@@ -40,16 +40,16 @@ const MemoryLane: React.FC = () => {
   };
 
   return (
-    <div className="memory-lane">
+    <div className='memory-lane'>
       <h1>Memory Lane</h1>
-      <input type="file" multiple accept="image/*" onChange={handleFileUpload} />
-      <div className="photo-gallery">
+      <input type='file' multiple accept='image/*' onChange={handleFileUpload} />
+      <div className='photo-gallery'>
         {photos.map((photo, index) => (
-          <div key={index} className="photo-card">
-            <img src={photo.src} alt={`Memory ${index}`} className="photo-image" />
+          <div key={index} className='photo-card'>
+            <img src={photo.src} alt={`Memory ${index}`} className='photo-image' />
             <input
-              type="date"
-              placeholder="Enter date"
+              type='date'
+              placeholder='Enter date'
               onChange={(e) => handleDateChange(index, e.target.value)}
               value={photo.date || ''}
             />
