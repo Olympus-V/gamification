@@ -10,7 +10,7 @@
 
       h1 {
           font-size: 2.5rem;
-          margin-bottom: 10px;
+          margin-bottom: 1em;
       }
 
       p {
@@ -21,11 +21,11 @@
 
   .gif-container {
     display: flex;
-    border-radius: 10px;
+    border-radius: 1em;
     .landing-gif {
         width: 70vw;
         height: auto;
-        border-radius: 10px;
+        border-radius: 1em;
     }
 }
 }
