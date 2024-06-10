@@ -3,10 +3,10 @@ import { useState } from "react";
 
 const SpankBank = () => {
   const [isJiggling, setIsJiggling] = useState(false);
-  const [slap] = useState(new Audio('/audio/SpankBank/spank.mp3'));
-  const [moanFirst] = useState(new Audio('/audio/SpankBank/moan_1.mp3'));
-  const [moanSecond] = useState(new Audio('/audio/SpankBank/moan_2.mp3'));
-  const [moanThird] = useState(new Audio('/audio/SpankBank/moan_3.mp3'));
+  const [slap] = useState(new Audio('/audios/SpankBank/spank.mp3'));
+  const [moanFirst] = useState(new Audio('/audios/SpankBank/moan_1.mp3'));
+  const [moanSecond] = useState(new Audio('/audios/SpankBank/moan_2.mp3'));
+  const [moanThird] = useState(new Audio('/audios/SpankBank/moan_3.mp3'));
 
   const handleSpank = () => {
     setIsJiggling(true);
