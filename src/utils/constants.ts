@@ -10,15 +10,6 @@ export const enum StringConstants {
     SPANK_BANK_ROUTE = '/games/spankBank',
     MEMORY_LANE_ROUTE = '/games/memoryLane',
     WHACK_A_MOLE_ROUTE = '/games/whackaMole',
-
-    // Home Page GIFs
-    GIF_HOME_1= '/gifs/home/1.gif',
-    GIF_HOME_2 = '/gifs/home/2.gif',
-    GIF_HOME_3 = '/gifs/home/3.gif',
-    GIF_HOME_4 = '/gifs/home/4.gif',
-    GIF_HOME_5 = '/gifs/home/5.gif',
-    GIF_HOME_6 = '/gifs/home/6.gif',
-    GIF_HOME_7 = '/gifs/home/7.gif',
     
     // Strings
     APP_TITLE_TEXT = 'Welcome to Love Laurels',
