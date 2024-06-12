@@ -2,6 +2,7 @@
   "name": "gamification",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://olympus-v.github.io/gamification",
   "dependencies": {
     "@babel/plugin-transform-private-property-in-object": "^7.24.7",
     "@emotion/react": "^11.11.4",
