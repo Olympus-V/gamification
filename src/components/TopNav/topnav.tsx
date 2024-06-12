@@ -25,7 +25,7 @@ const TopNav = () => {
                 <li onClick={() => { navigate('/games') }} className={isMenuItemActive('/games') ? 'active' : ''}>
                     <RocketLaunchTwoToneIcon fontSize='medium' /> Games
                 </li>
-                <li onClick={() => { navigate('/cart') }} className={isMenuItemActive('/about') ? 'active' : ''}>
+                <li onClick={() => { navigate('/cart') }} className={isMenuItemActive('/cart') ? 'active' : ''}>
                     <LocalGroceryStoreTwoToneIcon fontSize='medium' /> Cart
                 </li>
                 <li onClick={() => { navigate('/about') }} className={isMenuItemActive('/about') ? 'active' : ''}>

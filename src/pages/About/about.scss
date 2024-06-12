@@ -1,0 +1,83 @@
+.about-page {
+    flex-direction: column;
+    gap: 2em;
+    padding: 2em;
+}
+
+.section {
+    padding: 2em;
+
+    .icon {
+        margin-right: 2em;
+        max-width: 25em;
+        max-height: 25em;
+        height: auto;
+        width: auto;
+    }
+
+    h2 {
+        margin-bottom: 0.5rem;
+        color: #333;
+    }
+
+    p {
+        color: #666;
+        line-height: 1.6;
+    }
+
+    .chevron-icon {
+        margin-left: auto;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    &.expanded {
+        .chevron-icon {
+            transform: rotate(90deg);
+        }
+    }
+}
+
+.meet-our-team {
+    .carousel {
+        margin-top: 1em;
+        width: auto;
+        height: auto;
+    }
+
+    .carousel-item-content {
+        display: flex;
+        align-items: center;
+    }
+
+    .team-member-image {
+        position: relative;
+        object-fit: cover;
+        height: auto;
+        max-height: 20em;
+        width: auto;
+        max-width: 20em;
+        left: 10%;
+        background-color: #fff; 
+        padding: 1em;
+        border: 0.08em solid #ddd;
+        border-radius: 0.5em;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);    
+    }
+
+    .carousel-caption {
+        margin-left: 2em;
+        display: flex;
+        right: -5%;
+        bottom: 30%;
+        flex-direction: column;
+        justify-content: center;
+        color: black;
+    }
+}
+
+.social-links {
+    display: flex;
+    gap: 1em;
+    margin-top: 1em;
+}
