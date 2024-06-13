@@ -3,7 +3,7 @@ import './about.scss';
 import { ChevronRight } from '@mui/icons-material';
 import { StringConstants } from '../../utils/constants';
 import { useState } from 'react';
-import MeetOurTeam from './subComponents/meetOurTeam';
+import MeetOurTeam from './components/meetOurTeam';
 
 const About = () => {
 

@@ -20,7 +20,7 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
             img {
-                width: auto;
+                width: -webkit-fill-available;
                 height: auto;
                 max-width: 15em;
                 max-height: 15em;
