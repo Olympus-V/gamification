@@ -33,3 +33,10 @@
         }
     }
 }
+
+// Media query for screens smaller than 650px
+@media (max-width: 650px) {
+    .top-nav {
+        flex-direction: column !important;
+    }
+}
