@@ -1,0 +1,98 @@
+.input-details {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .custom-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    // will enable background image once find suitable
+    // background: url("../../../../public/images/SpankBank/silhoutte.jpg") no-repeat center center;
+    // background-size: cover;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input, textarea {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  input:hover, textarea:hover {
+    border-color: #e798be;
+    outline: none;
+    box-shadow: 0 8px 20px rgba(247, 99, 202, 0.4);
+    transform: translateY(-3px);
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  input:active, textarea:active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 10px rgba(247, 99, 202, 0.4);
+  }
+  
+  .submit-button {
+    padding: 10px 15px;
+    font-size: 18px;
+    background: #e798be;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(229, 139, 238, 0.4);
+    position: relative;
+  }
+  
+  .submit-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: opacity 0.3s;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .submit-button:hover::before {
+    opacity: 1;
+  }
+  
+  .submit-button:hover {
+    background: #ec04d9;
+    box-shadow: 0 8px 20px rgba(255, 10, 14, 0.6);
+    transform: translateY(-3px);
+  }
+  
+  .submit-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 10px rgba(255, 10, 14, 0.6);
+  }
