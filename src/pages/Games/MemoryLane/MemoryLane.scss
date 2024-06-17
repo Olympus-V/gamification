@@ -1,60 +1,242 @@
 .memory-lane {
-  padding: 1.25em;
-  background: linear-gradient(to right, #8C0301, #450505, #641c1c, #952828);
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #ffffff; // Ensures text is visible on the dark background
+  min-height: 100vh;
+  background-color: #f0f0f0;
 
-  .photo-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.25em;
-    justify-content: center;
-    margin-top: 1.25em;
-  }
-
-  .photo-card {
-    border: 0.0625em solid #ddd;
-    padding: 0.9375em;
-    border-radius: 0.5em;
-    box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.1);
-    background-color: #ffffff;
-    width: 12.5em;
-    text-align: center;
-    transition: transform 0.3s ease;
-    display: flex;
+  &.single-column {
     flex-direction: column;
     align-items: center;
 
-    &:hover {
-      transform: translateY(-0.3125em);
+    .left-side {
+      width: 100%;
     }
 
-    .photo-image {
-      width: 100%; // Makes the image fill the card width
-      height: 9.375em; // Fixed height to maintain aspect ratio
-      object-fit: cover; // Ensures the image covers the div area without distortion
-      border-radius: 0.5em;
+    .right-side {
+      display: none;
     }
   }
 
-  input[type="date"] {
-    width: calc(100% - 1.875em); // Adjusts for padding
-    padding: 0.3125em;
-    margin-top: 0.625em;
-    margin-left: 0.9375em; // Aligns input for aesthetics
-    margin-right: 0.9375em; // Aligns input for aesthetics
-    border-radius: 0.25em;
-    border: 0.0625em solid #ccc;
+  .left-side {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    .photo-gallery {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      &.horizontal-scroll {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+    }
+
+    .photo-card {
+      position: relative;
+      margin: 10px;
+      padding: 10px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      background-color: #fff;
+      width: 200px;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      .photo-image {
+        max-width: 100%;
+        max-height: 70%;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+
+      .remove-button {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        background-color: #ff4d4f;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 18px;
+        line-height: 30px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s, transform 0.3s;
+        text-decoration: none;
+
+        &:hover {
+          background-color: #ff7875;
+          transform: scale(1.1);
+        }
+      }
+
+      input[type='date'] {
+        margin-top: 10px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+        transition: border-color 0.3s;
+
+        &:focus {
+          border-color: #007BFF;
+        }
+      }
+    }
+
+    .upload-image {
+      width: 200px;
+      height: 200px;
+      border: 2px dashed #ccc;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      background-color: #f9f9f9;
+      transition: border-color 0.3s, background-color 0.3s;
+
+      &:hover {
+        border-color: #007BFF;
+        background-color: #eef6ff;
+      }
+
+      &::before {
+        content: '+';
+        font-size: 3rem;
+        color: #007BFF;
+      }
+    }
+
+    .add-images-text {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      color: #777;
+    }
+
+    .add-more {
+      width: 200px;
+      height: 200px;
+      margin: 10px;
+      border: 2px dashed #ccc;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      background-color: #f9f9f9;
+      font-size: 3rem;
+      color: #007BFF;
+      transition: border-color 0.3s, background-color 0.3s;
+
+      &:hover {
+        border-color: #007BFF;
+        background-color: #eef6ff;
+      }
+    }
+
+    .generate-button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      color: white;
+      background-color: #28a745;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s, transform 0.3s;
+
+      &:hover {
+        background-color: #218838;
+        transform: translateY(-3px);
+      }
+    }
   }
 
-  input[type="file"] {
-    margin: 1.25em;
-    padding: 0.625em;
-    background-color: #ffffff;
-    border: 0.0625em solid #ddd;
-    border-radius: 0.25em;
+  .right-side {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    overflow: hidden;
+
+    .right-image {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      margin: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .photo-gallery {
+      flex-direction: column;
+
+      .photo-card {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+
+      .add-more {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+
+    .right-side {
+      display: none;
+    }
+
+    .left-side {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .photo-gallery {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .photo-card {
+        margin: 10px;
+      }
+
+      .add-more {
+        margin: 10px;
+      }
+    }
   }
 }

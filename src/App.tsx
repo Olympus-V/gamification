@@ -1,25 +1,31 @@
-//Styles
+// Styles
 import './App.css';
 
-//Components
+// Components
 import React, { Suspense } from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import TopNav from './components/TopNav/topnav';
 import { CircularProgress } from '@mui/material';
 
-//Pages
+// Pages
 const Home = React.lazy(() => import('./pages/Home/home'));
 const Games = React.lazy(() => import('./pages/Games/games'));
 const SpinTheWheel = React.lazy(() => import('./pages/Games/SpinTheWheel/spinTheWheel'));
 const SpankBank = React.lazy(() => import('./pages/Games/SpankBank/spankBank'));
-const MemoryLane= React.lazy(()=> import('./pages/Games/MemoryLane/MemoryLane'));
+const MemoryLane = React.lazy(() => import('./pages/Games/MemoryLane/MemoryLane'));
+const Gallery = React.lazy(() => import('./pages/Games/MemoryLane/Gallery'));
 
 function App() {
+  const location = useLocation();
+  const showTopNav = location.pathname === '/home' || location.pathname === '/games';
+
   return (
     <>
-      <div className='top-nav'>
-        <TopNav />
-      </div>
+      {showTopNav && (
+        <div className='top-nav'>
+          <TopNav />
+        </div>
+      )}
       <div className='main'>
         <Suspense fallback={<div className="loading-container"><CircularProgress /></div>}>
           <Routes>
@@ -27,7 +33,8 @@ function App() {
             <Route path='/games' element={<Games />} />
             <Route path='/games/spinTheWheel' element={<SpinTheWheel />} />
             <Route path='/games/spankBank' element={<SpankBank />} />
-            <Route path='/games/memoryLane' element={<MemoryLane/>}/>
+            <Route path='/games/memoryLane' element={<MemoryLane />} />
+            <Route path='/games/memoryLane/gallery' element={<Gallery />} />
             {/* Default Route */}
             <Route path='/' element={<Navigate to='/home' />} />
             <Route path='*' element={<Navigate to='/' />} />
@@ -35,7 +42,6 @@ function App() {
         </Suspense>
       </div>
     </>
-
   );
 }
 
