@@ -1,18 +1,19 @@
 import './home.scss';
 
 import { useEffect, useState } from 'react';
+import { StringConstants } from '../../utils/constants';
 
 const HomePage = () => {
     const [currentGifIndex, setCurrentGifIndex] = useState(0);
 
     const gifSources = [
-        '/gifs/home/1.gif',
-        '/gifs/home/2.gif',
-        '/gifs/home/3.gif',
-        '/gifs/home/4.gif',
-        '/gifs/home/5.gif',
-        '/gifs/home/6.gif',
-        '/gifs/home/7.gif',
+        `${process.env.PUBLIC_URL}/gifs/home/1.gif`,
+        `${process.env.PUBLIC_URL}/gifs/home/2.gif`,
+        `${process.env.PUBLIC_URL}/gifs/home/3.gif`,
+        `${process.env.PUBLIC_URL}/gifs/home/4.gif`,
+        `${process.env.PUBLIC_URL}/gifs/home/5.gif`,
+        `${process.env.PUBLIC_URL}/gifs/home/6.gif`,
+        `${process.env.PUBLIC_URL}/gifs/home/7.gif`,
     ];
 
     useEffect(() => {
@@ -24,16 +25,16 @@ const HomePage = () => {
     }, []);
 
     return (
-        <div className="home-page">
-            <div className="landing-content">
-                <h1>Welcome to Love Laurels</h1>
-                <p>Surprise your loved ones with customizable games and more.</p>
+        <div className='container home-page'>
+            <div className='landing-content'>
+                <h1>{StringConstants.APP_TITLE_TEXT}</h1>
+                <p>{StringConstants.APP_DESCRIPTION_TEXT}</p>
             </div>
-            <div className="gif-container">
+            <div className='gif-container'>
                 <img
                     src={gifSources[currentGifIndex]}
-                    alt="Landing animation"
-                    className="landing-gif"
+                    alt='Landing animation'
+                    className='landing-gif'
                 />
             </div>
         </div>

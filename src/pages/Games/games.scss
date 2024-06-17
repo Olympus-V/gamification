@@ -3,7 +3,7 @@
     
     .games-content {
         flex-wrap: wrap;
-        gap: 4em;
+        gap: 2em;
         padding: 2em;
         max-width: 90vw;
 
@@ -20,7 +20,7 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
             img {
-                width: auto;
+                width: -webkit-fill-available;
                 height: auto;
                 max-width: 15em;
                 max-height: 15em;
@@ -32,8 +32,8 @@
             button {
                 padding: 0.75em 1.5em;
                 font-size: 1em;
-                max-width: 12em;
                 width: auto;
+                max-width: 12em;
                 cursor: pointer;
                 background-color: #007BFF;
                 color: white;

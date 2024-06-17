@@ -16,7 +16,7 @@ const TopNav = () => {
 
     return (
         <nav className='top-nav'>
-            <img src='/app_logo_transparent.png' alt='App Logo' className='logo'/>
+            <img src={`${process.env.PUBLIC_URL}/app_logo_transparent.png`} alt='App Logo' className='logo'/>
             <ul>
                 <li onClick={() => { navigate('/home') }} className={isMenuItemActive('/home') ? 'active' : ''}>
                     <HomeTwoToneIcon fontSize='medium' /> Home
@@ -25,7 +25,7 @@ const TopNav = () => {
                 <li onClick={() => { navigate('/games') }} className={isMenuItemActive('/games') ? 'active' : ''}>
                     <RocketLaunchTwoToneIcon fontSize='medium' /> Games
                 </li>
-                <li onClick={() => { navigate('/cart') }} className={isMenuItemActive('/about') ? 'active' : ''}>
+                <li onClick={() => { navigate('/cart') }} className={isMenuItemActive('/cart') ? 'active' : ''}>
                     <LocalGroceryStoreTwoToneIcon fontSize='medium' /> Cart
                 </li>
                 <li onClick={() => { navigate('/about') }} className={isMenuItemActive('/about') ? 'active' : ''}>
