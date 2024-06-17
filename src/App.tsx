@@ -14,7 +14,7 @@ const Games = React.lazy(() => import('./pages/Games/games'));
 const Cart = React.lazy(() => import('./pages/Cart/cart'));
 const About = React.lazy(() => import('./pages/About/about'));
 const SpinTheWheel = React.lazy(() => import('./pages/Games/SpinTheWheel/spinTheWheel'));
-const SpankBank = React.lazy(() => import('./pages/Games/SpankBank/spankBank'));
+const SpankBank = React.lazy(() => import('./pages/Games/SpankBank/spankBankLanding'));
 const MemoryLane= React.lazy(()=> import('./pages/Games/MemoryLane/MemoryLane'));
 const WhackAMole = React.lazy(() => import('./pages/Games/WhackAMole/whackAMole'));
 
