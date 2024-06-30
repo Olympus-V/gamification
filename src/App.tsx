@@ -1,29 +1,35 @@
-//Styles
+// Styles
 import './App.css';
 
-//Components
+// Components
 import React, { Suspense } from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import TopNav from './components/TopNav/topnav';
 import { CircularProgress } from '@mui/material';
 import { StringConstants } from './utils/constants';
 
-//Pages
+// Pages
 const Home = React.lazy(() => import('./pages/Home/home'));
 const Games = React.lazy(() => import('./pages/Games/games'));
 const Cart = React.lazy(() => import('./pages/Cart/cart'));
 const About = React.lazy(() => import('./pages/About/about'));
 const SpinTheWheel = React.lazy(() => import('./pages/Games/SpinTheWheel/spinTheWheel'));
 const SpankBank = React.lazy(() => import('./pages/Games/SpankBank/spankBank'));
-const MemoryLane= React.lazy(()=> import('./pages/Games/MemoryLane/MemoryLane'));
+const MemoryLane = React.lazy(() => import('./pages/Games/MemoryLane/MemoryLane'));
+const Gallery = React.lazy(() => import('./pages/Games/MemoryLane/Gallery'));
 const WhackAMole = React.lazy(() => import('./pages/Games/WhackAMole/whackAMole'));
 
 function App() {
+  const location = useLocation();
+  const showTopNav = location.pathname === '/home' || location.pathname === '/games';
+
   return (
     <>
-      <div className='top-nav'>
-        <TopNav />
-      </div>
+      {showTopNav && (
+        <div className='top-nav'>
+          <TopNav />
+        </div>
+      )}
       <div className='main'>
         <Suspense fallback={<div className='loading-container'><CircularProgress/></div>}>
           <Routes>
@@ -34,6 +40,7 @@ function App() {
             <Route path={StringConstants.SPIN_THE_WHEEL_ROUTE} element={<SpinTheWheel/>}/>
             <Route path={StringConstants.SPANK_BANK_ROUTE} element={<SpankBank/>}/>
             <Route path={StringConstants.MEMORY_LANE_ROUTE} element={<MemoryLane/>}/>
+            <Route path='/games/memoryLane/gallery' element={<Gallery />} />
             <Route path={StringConstants.WHACK_A_MOLE_ROUTE} element={<WhackAMole/>}/>
             {/* Default Route */}
             <Route path='/' element={<Navigate to={StringConstants.HOME_ROUTE}/>} />
@@ -42,7 +49,6 @@ function App() {
         </Suspense>
       </div>
     </>
-
   );
 }
 
