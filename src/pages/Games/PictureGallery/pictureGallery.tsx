@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import ExifReader from 'exifreader';
 import { useNavigate } from 'react-router-dom';
  // Adjust the path as necessary
-import './MemoryLane.scss';
+import './pictureGallery.scss';
 import { useAppDispatch } from '../../../store/store';
 import { setPhotos } from '../../../store/slices/photoSlice';
 interface IPhoto {
@@ -114,7 +114,7 @@ const MemoryLane: React.FC = () => {
             photos.map((photo, index) => (
               <div key={index} className='photo-card'>
                 <img src={photo.src} alt={`Memory ${index}`} className='photo-image' />
-                <a href="#" className="remove-button" onClick={() => removePhoto(index)}>&#215;</a>
+                <div className='remove-button' onClick={() => removePhoto(index)}>&#215;</div>
                 <input
                   type='date'
                   placeholder='Enter date'
@@ -138,7 +138,7 @@ const MemoryLane: React.FC = () => {
       </div>
       {photos.length === 0 && (
         <div className='right-side'>
-          <img src="/images/MemoryLane/photo.jpg" alt="Right Side Image" className='right-image' />
+          <img src={`${process.env.PUBLIC_URL}/images/PictureGallery/photo.jpg`} alt='Background' className='right-image' />
         </div>
       )}
     </div>

@@ -8,7 +8,8 @@ export const enum StringConstants {
     ABOUT_ROUTE = '/about',
     SPIN_THE_WHEEL_ROUTE = '/games/spinTheWheel',
     SPANK_BANK_ROUTE = '/games/spankBank',
-    MEMORY_LANE_ROUTE = '/games/memoryLane',
+    PICTURE_GALLERY_ROUTE = '/games/pictureGallery',
+    GALLERY_VIEW_ROUTE = '/games/pictureGallery/gallery',
     WHACK_A_MOLE_ROUTE = '/games/whackaMole',
     
     // Strings

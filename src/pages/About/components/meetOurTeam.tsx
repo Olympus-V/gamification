@@ -66,7 +66,7 @@ const MeetOurTeam = () => {
                 <Carousel.Item>
                     <img
                         className='team-member-image d-block mt-3'
-                        src={`${process.env.PUBLIC_URL}/images/Team/Kant.png`}
+                        src={`${process.env.PUBLIC_URL}/images/Team/kant.png`}
                         alt='Third slide'
                     />
                    <TeamMemberCaption 

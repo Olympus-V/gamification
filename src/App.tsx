@@ -15,8 +15,8 @@ const Cart = React.lazy(() => import('./pages/Cart/cart'));
 const About = React.lazy(() => import('./pages/About/about'));
 const SpinTheWheel = React.lazy(() => import('./pages/Games/SpinTheWheel/spinTheWheel'));
 const SpankBank = React.lazy(() => import('./pages/Games/SpankBank/spankBank'));
-const MemoryLane = React.lazy(() => import('./pages/Games/MemoryLane/MemoryLane'));
-const Gallery = React.lazy(() => import('./pages/Games/MemoryLane/Gallery'));
+const MemoryLane = React.lazy(() => import('./pages/Games/PictureGallery/pictureGallery'));
+const Gallery = React.lazy(() => import('./pages/Games/PictureGallery/galleryView'));
 const WhackAMole = React.lazy(() => import('./pages/Games/WhackAMole/whackAMole'));
 
 function App() {
@@ -39,8 +39,8 @@ function App() {
             <Route path={StringConstants.ABOUT_ROUTE} element={<About/>}/>
             <Route path={StringConstants.SPIN_THE_WHEEL_ROUTE} element={<SpinTheWheel/>}/>
             <Route path={StringConstants.SPANK_BANK_ROUTE} element={<SpankBank/>}/>
-            <Route path={StringConstants.MEMORY_LANE_ROUTE} element={<MemoryLane/>}/>
-            <Route path='/games/memoryLane/gallery' element={<Gallery />} />
+            <Route path={StringConstants.PICTURE_GALLERY_ROUTE} element={<MemoryLane/>}/>
+            <Route path={StringConstants.GALLERY_VIEW_ROUTE} element={<Gallery />} />
             <Route path={StringConstants.WHACK_A_MOLE_ROUTE} element={<WhackAMole/>}/>
             {/* Default Route */}
             <Route path='/' element={<Navigate to={StringConstants.HOME_ROUTE}/>} />
