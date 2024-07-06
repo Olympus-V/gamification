@@ -21,7 +21,7 @@ const WhackAMole = React.lazy(() => import('./pages/Games/WhackAMole/whackAMole'
 
 function App() {
   const location = useLocation();
-  const showTopNav = location.pathname === '/home' || location.pathname === '/games';
+  const showTopNav = location.pathname === '/home' || location.pathname === '/games' || location.pathname === '/cart' || location.pathname === '/about';
 
   return (
     <>
