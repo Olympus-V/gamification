@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import './Gallery.scss';
+import './galleryView.scss';
 import { useAppSelector } from '../../../store/store';
 
-const Gallery: React.FC = () => {
+const GalleryView: React.FC = () => {
   const photos = useAppSelector((state) => state.photosData.photos);
   const [imageURLs, setImageURLs] = useState<string[]>([]);
 
@@ -65,7 +65,7 @@ const Gallery: React.FC = () => {
       <div className="horizontal-scroll-wrapper">
         {imageURLs.map((url, index) => (
           <div className={`img-wrapper ${photoClassesAndLinks[index]?.className || ''}`} key={index}>
-            <a href={photoClassesAndLinks[index]?.link || '#'} target="_blank" rel="noopener">
+            <a href={photoClassesAndLinks[index]?.link || '#'} target="_blank" rel="noopener noreferrer">
               <img src={url} alt={`memory-${index}`} />
             </a>
           </div>
@@ -87,4 +87,4 @@ const Gallery: React.FC = () => {
   );
 };
 
-export default Gallery;
+export default GalleryView;
