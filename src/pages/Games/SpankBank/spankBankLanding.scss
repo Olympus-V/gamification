@@ -4,6 +4,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url('gelialexspank-gelialex.gif');
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: darkgray;
   }
   
   .custom-form {
@@ -11,12 +16,10 @@
     flex-direction: column;
     width: 100%;
     max-width: 400px;
-    // will enable background image once find suitable
-    // background: url("../../../../public/images/SpankBank/silhoutte.jpg") no-repeat center center;
-    // background-size: cover;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.75);
   }
   
   .form-group {
