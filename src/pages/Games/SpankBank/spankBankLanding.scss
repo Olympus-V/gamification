@@ -28,7 +28,7 @@
     font-weight: bold;
   }
   
-  input, textarea {
+  input, textarea, select {
     padding: 10px;
     font-size: 16px;
     width: 100%;
@@ -39,7 +39,7 @@
     position: relative;
   }
   
-  input:hover, textarea:hover {
+  input:hover, textarea:hover, select:hover {
     border-color: #e798be;
     outline: none;
     box-shadow: 0 8px 20px rgba(247, 99, 202, 0.4);
@@ -50,7 +50,7 @@
     resize: vertical;
   }
   
-  input:active, textarea:active {
+  input:active, textarea:active, select:active {
     transform: translateY(1px);
     box-shadow: 0 3px 10px rgba(247, 99, 202, 0.4);
   }
