@@ -1,0 +1,18 @@
+name: Enforce Branch Naming Convention
+on:
+  push:
+    branches: [ '*' ]
+
+jobs:
+  enforce-branch-name:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Branch Name
+        run: |
+          BRANCH_NAME="${GITHUB_REF#refs/heads/}"
+          PATTERN="^([A-Za-z0-9-]+\/[A-Z]+-[0-9]+\/[A-Za-z0-9-]+$"
+          if [[ ! $BRANCH_NAME =~ $PATTERN ]]; then
+            echo "Branch name does not match the convention."
+            echo "Branch name should be for example: SP/JIRA-999/short-description"
+            exit 1
+          fi
