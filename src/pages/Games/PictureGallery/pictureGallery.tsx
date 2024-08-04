@@ -138,7 +138,7 @@ const MemoryLane: React.FC = () => {
       </div>
       {photos.length === 0 && (
         <div className='right-side'>
-          <img src={`${process.env.PUBLIC_URL}/images/PictureGallery/photo.jpg`} alt='Background' className='right-image' />
+          <img src='/images/PictureGallery/photo.jpg`} alt='Background' className='right-image' />
         </div>
       )}
     </div>

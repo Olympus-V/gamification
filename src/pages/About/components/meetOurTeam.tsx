@@ -11,7 +11,7 @@ const MeetOurTeam = () => {
                 <Carousel.Item>
                     <img
                         className='team-member-image d-block mt-3'
-                        src={`${process.env.PUBLIC_URL}/images/Team/deb.png`}
+                        src='/images/Team/deb.png'
                         alt='First slide'
                     />
                    <TeamMemberCaption 
@@ -25,7 +25,7 @@ const MeetOurTeam = () => {
                 <Carousel.Item>
                     <img
                         className='team-member-image d-block mt-3'
-                        src={`${process.env.PUBLIC_URL}/images/Team/satyajit.png`}
+                        src='/images/Team/satyajit.png'
                         alt='Second slide'
                     />
                     <TeamMemberCaption 
@@ -39,7 +39,7 @@ const MeetOurTeam = () => {
                 <Carousel.Item>
                     <img
                         className='team-member-image d-block mt-3'
-                        src={`${process.env.PUBLIC_URL}/images/Team/spruha.png`}
+                        src='/images/Team/spruha.png'
                         alt='Third slide'
                     />
                     <TeamMemberCaption 
@@ -52,7 +52,7 @@ const MeetOurTeam = () => {
                 <Carousel.Item>
                     <img
                         className='team-member-image d-block mt-3'
-                        src={`${process.env.PUBLIC_URL}/images/Team/raghu.png`}
+                        src='/images/Team/raghu.png'
                         alt='Second slide'
                     />
                    <TeamMemberCaption 
@@ -66,7 +66,7 @@ const MeetOurTeam = () => {
                 <Carousel.Item>
                     <img
                         className='team-member-image d-block mt-3'
-                        src={`${process.env.PUBLIC_URL}/images/Team/kant.png`}
+                        src='/images/Team/kant.png'
                         alt='Third slide'
                     />
                    <TeamMemberCaption 

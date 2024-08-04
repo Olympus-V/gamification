@@ -3,10 +3,10 @@ import { useState } from "react";
 
 const SpankBank = () => {
   const [isJiggling, setIsJiggling] = useState(false);
-  const [slap] = useState(new Audio(`${process.env.PUBLIC_URL}/audios/SpankBank/spank.mp3`));
-  const [moanFirst] = useState(new Audio(`${process.env.PUBLIC_URL}/audios/SpankBank/moan_1.mp3`));
-  const [moanSecond] = useState(new Audio(`${process.env.PUBLIC_URL}/audios/SpankBank/moan_2.mp3`));
-  const [moanThird] = useState(new Audio(`${process.env.PUBLIC_URL}/audios/SpankBank/moan_3.mp3`));
+  const [slap] = useState(new Audio('/audios/SpankBank/spank.mp3'));
+  const [moanFirst] = useState(new Audio('/audios/SpankBank/moan_1.mp3'));
+  const [moanSecond] = useState(new Audio('/audios/SpankBank/moan_2.mp3'));
+  const [moanThird] = useState(new Audio('/audios/SpankBank/moan_3.mp3'));
 
   const handleSpank = () => {
     setIsJiggling(true);
@@ -35,7 +35,7 @@ const SpankBank = () => {
         className={`graphic-container ${isJiggling ? 'jiggle' : ''}`}
         onClick={handleClick}
       >
-        <img src={`${process.env.PUBLIC_URL}/images/SpankBank/ass.png`} alt='ass'/>
+        <img src='/images/SpankBank/ass.png' alt='ass'/>
       </div>
     </div>
   );

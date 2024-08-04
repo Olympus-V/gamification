@@ -16,7 +16,7 @@ const TopNav = () => {
 
     return (
         <nav className='top-nav'>
-            <img src={`${process.env.PUBLIC_URL}/app_logo_transparent.png`} alt='App Logo' className='logo'/>
+            <img src='/app_logo_transparent.png' alt='App Logo' className='logo'/>
             <ul>
                 <li onClick={() => { navigate('/home') }} className={isMenuItemActive('/home') ? 'active' : ''}>
                     <HomeTwoToneIcon fontSize='medium' /> Home

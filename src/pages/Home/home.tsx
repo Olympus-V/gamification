@@ -7,13 +7,13 @@ const HomePage = () => {
     const [currentGifIndex, setCurrentGifIndex] = useState(0);
 
     const gifSources = [
-        `${process.env.PUBLIC_URL}/gifs/home/1.gif`,
-        `${process.env.PUBLIC_URL}/gifs/home/2.gif`,
-        `${process.env.PUBLIC_URL}/gifs/home/3.gif`,
-        `${process.env.PUBLIC_URL}/gifs/home/4.gif`,
-        `${process.env.PUBLIC_URL}/gifs/home/5.gif`,
-        `${process.env.PUBLIC_URL}/gifs/home/6.gif`,
-        `${process.env.PUBLIC_URL}/gifs/home/7.gif`,
+        '/gifs/home/1.gif',
+        '/gifs/home/2.gif',
+        '/gifs/home/3.gif',
+        '/gifs/home/4.gif',
+        '/gifs/home/5.gif',
+        '/gifs/home/6.gif',
+        '/gifs/home/7.gif',
     ];
 
     useEffect(() => {
